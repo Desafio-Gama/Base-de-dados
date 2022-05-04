@@ -61,3 +61,14 @@ INSERT INTO pedido(id_cliente, data_pedido)
 
 INSERT INTO pedido_produto(id_pedido, id_produto, quantidade, preco)                                                                     	VALUES(1, 2, 1, 58.54), (1, 3, 1, 168.45), (2, 1, 1, 588.54), (2, 3, 1, 168.45), (3, 1, 1, 588.54), (3, 2, 1, 58.54), (3, 3, 1, 168.45), (4, 2, 1, 58.54), (5, 1, 1, 588.54), (5, 3, 1, 168.45);
 ```
+
+## Construindo um select com inner join.
+
+```sql
+SELECT c.name AS cliente, pe.id AS id_do_pedido, p.nome, pp.quantidade AS quantidade_item, pp.preco AS preco_do_item, (pp.quantidade * pp.preco) AS total_item
+	FROM cliente c
+	INNER JOIN pedido pe ON c.id = pe.id_cliente
+	INNER JOIN pedido_produto pp ON pe.id = pp.id_pedido
+	INNER JOIN produto p ON pp.id_produto = p.id
+	ORDER BY id_do_pedido;
+```
