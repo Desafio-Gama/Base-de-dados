@@ -15,7 +15,7 @@ Em seguida vai pedir para digitar o password.
 ```sql
 CREATE TABLE cliente (
 	id serial PRIMARY KEY,
-	name VARCHAR ( 50 ) NOT NULL,
+	nome VARCHAR ( 50 ) NOT NULL,
 	email VARCHAR ( 255 ) UNIQUE NOT NULL
 );
 
