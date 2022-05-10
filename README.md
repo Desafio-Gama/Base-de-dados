@@ -50,7 +50,7 @@ CREATE TABLE pedido_produto (
 ## Inserindo os valores
 
 ```sql
-INSERT INTO cliente(name, email)
+INSERT INTO cliente(nome, email)
 	VALUES('Danieli', 'Danieli@email.com'), ('Danilo', 'danilo@email.com'), ('Claudia', 'claudia@email.com'), ('Rafaella', 'rafa@email.com');
 
 INSERT INTO produto(nome, descricao, quantidade, data_cadastro, preco)
